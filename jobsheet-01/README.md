@@ -15,9 +15,13 @@
 <img width="653" height="742" alt="Cuplikan layar 2026-08-29 225045" src="https://github.com/user-attachments/assets/98ef28c7-51e5-42f9-a9a7-8724622fd297" />
 
 ### 1.3 Modifikasi Kode program
+<img width="376" height="393" alt="Cuplikan layar 2026-08-29 234856" src="https://github.com/user-attachments/assets/38c3d1a6-3d89-4491-8346-81dabebdcd68" />
 
 ### 1.4 Hasil Modifikasi
+<img width="586" height="741" alt="Cuplikan layar 2026-08-29 234813" src="https://github.com/user-attachments/assets/a78a28db-03d0-4d4a-b2d7-12b24cc862b1" />
 
+### penjelasan
+Mengubah bagian total buku menjadi 25 buku dan bagian sedang dipinjam menjadi 5
 
 ## 2. Buku
 
@@ -33,9 +37,13 @@
 
 
 ### 2.3 Modifikasi Kode program list buku
+<img width="727" height="712" alt="Cuplikan layar 2026-08-29 233714" src="https://github.com/user-attachments/assets/9b9f68ba-d21a-4415-96ce-fc2d7fa370c4" />
+<img width="725" height="476" alt="Cuplikan layar 2026-08-29 233724" src="https://github.com/user-attachments/assets/e326d608-c0f1-41fd-8aac-7b4c06accb58" />
 
 ### 2.4 Hasil modifikasi program list buku
-
+<img width="847" height="633" alt="Cuplikan layar 2026-08-29 233819" src="https://github.com/user-attachments/assets/dda8027d-5dc1-484f-b3dd-23eb0075ce19" />
+### Penjelasan
+Menambahkan tabel body baru untuk menambah jumlah list buku
 
 ### 2.5 kode program tambah buku
 <img width="862" height="440" alt="Cuplikan layar 2026-08-29 231353" src="https://github.com/user-attachments/assets/5319e2c5-7259-4cdd-b9c9-649ce12102f9" />
@@ -45,11 +53,6 @@
 
 ### 2.6 Hasil Output kode program tambah Buku
 <img width="517" height="832" alt="Cuplikan layar 2026-08-29 231312" src="https://github.com/user-attachments/assets/0fe8d42a-4400-4898-95fe-aa77b22779d3" />
-
-
-### 2.7 Modifikasi Kode program tambah buku
-
-### 2.8 Hasil modifikasi program tambah buku
 
 ## 3. Anggota
 
@@ -63,8 +66,13 @@
 
 
 ### 3.3 Modifikasi Kode program list Anggota
+<img width="729" height="736" alt="Cuplikan layar 2026-08-29 234411" src="https://github.com/user-attachments/assets/63c2f9f1-66b1-4b8c-9aaf-b9746b74c697" />
 
 ### 3.4 Hasil modifikasi program list Anggota
+<img width="570" height="580" alt="Cuplikan layar 2026-08-29 234321" src="https://github.com/user-attachments/assets/7e009f10-3272-4343-a081-ec2567f1b4ed" />
+
+### Penjelasan
+menambah tabel body baru untuk menambah jumlah anggota
 
 
 ### 3.5 kode program tambah Anggota
@@ -76,9 +84,6 @@
 <img width="391" height="701" alt="Cuplikan layar 2026-08-29 231931" src="https://github.com/user-attachments/assets/7344273c-960c-4af5-89a6-9ee9d53fb4fc" />
 
 
-### 3.7 Modifikasi Kode program tambah Anggota
-
-### 3.8 Hasil modifikasi program tambah Anggota
 
 
 
