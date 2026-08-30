@@ -66,20 +66,16 @@ Membuat tombol ketiga di tabel.Menambahkan tombol "Detail" di antara Edit dan Ha
 <img width="1620" height="843" alt="Cuplikan layar 2026-08-30 130612" src="https://github.com/user-attachments/assets/86669981-9273-480f-8b45-01d68f979b38" />
 
 
-### 3.3 Modifikasi Kode program list buku
-
-### 3.4 Hasil modifikasi program list buku
-
 ### Penjelasan
 Menambahkan tabel body baru untuk menambah jumlah list buku
 
-### 3.5 kode program tambah buku
+### 3.3 kode program tambah buku
 <img width="847" height="478" alt="Cuplikan layar 2026-08-30 125506" src="https://github.com/user-attachments/assets/54ce9741-548f-4c72-93c5-2b2e40c0c41f" />
 <img width="983" height="790" alt="Cuplikan layar 2026-08-29 231415" src="https://github.com/user-attachments/assets/2f232426-35dd-40e0-b593-979f703aae0c" />
 <img width="650" height="286" alt="Cuplikan layar 2026-08-29 231424" src="https://github.com/user-attachments/assets/32f81e63-94b9-499d-b356-5922e58bd94f" />
 
 
-### 3.6 Hasil Output kode program tambah Buku
+### 3.4 Hasil Output kode program tambah Buku
 <img width="1613" height="838" alt="Cuplikan layar 2026-08-30 130519" src="https://github.com/user-attachments/assets/d5f6a572-7aa0-427d-a47e-52f82ff225ce" />
 
 
@@ -95,23 +91,18 @@ Menambahkan tabel body baru untuk menambah jumlah list buku
 <img width="1614" height="840" alt="Cuplikan layar 2026-08-30 130419" src="https://github.com/user-attachments/assets/66055ca8-ee11-41a6-a853-0f040ca9c410" />
 
 
-### 4.3 Modifikasi Kode program list Anggota
-
-
-### 4.4 Hasil modifikasi program list Anggota
-
 
 ### Penjelasan
 menambah tabel body baru untuk menambah jumlah anggota
 
 
-### 4.5 kode program tambah Anggota
+### 4.3 kode program tambah Anggota
 <img width="933" height="832" alt="Cuplikan layar 2026-08-30 130214" src="https://github.com/user-attachments/assets/6b445402-bc3a-4ec3-a23f-4fccefb87823" />
 
 <img width="810" height="518" alt="Cuplikan layar 2026-08-29 231850" src="https://github.com/user-attachments/assets/79d5bfdb-6b89-48ec-8801-27b0ea29f5a2" />
 
 
-### 4.6 Hasil Output kode program tambah Anggota
+### 4.4 Hasil Output kode program tambah Anggota
 <img width="1845" height="842" alt="Cuplikan layar 2026-08-30 130334" src="https://github.com/user-attachments/assets/534a4f3c-35da-44fa-b098-f514e79fc6a6" />
 
 
