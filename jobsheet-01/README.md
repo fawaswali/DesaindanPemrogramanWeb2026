@@ -15,10 +15,13 @@
 <img width="653" height="742" alt="Cuplikan layar 2026-08-29 225045" src="https://github.com/user-attachments/assets/98ef28c7-51e5-42f9-a9a7-8724622fd297" />
 
 ### 1.3 Modifikasi Kode program
+<img width="927" height="459" alt="Cuplikan layar 2026-08-30 131808" src="https://github.com/user-attachments/assets/471630ae-0ed5-4dda-af7b-64027bea4d81" />
+
 <img width="376" height="393" alt="Cuplikan layar 2026-08-29 234856" src="https://github.com/user-attachments/assets/38c3d1a6-3d89-4491-8346-81dabebdcd68" />
 
 ### 1.4 Hasil Modifikasi
-<img width="586" height="741" alt="Cuplikan layar 2026-08-29 234813" src="https://github.com/user-attachments/assets/a78a28db-03d0-4d4a-b2d7-12b24cc862b1" />
+<img width="1620" height="844" alt="Cuplikan layar 2026-08-30 131707" src="https://github.com/user-attachments/assets/cd8d6f8a-80e1-4b89-b380-f38c18bd4e1f" />
+
 
 ### penjelasan
 Mengubah bagian total buku menjadi 25 buku dan bagian sedang dipinjam menjadi 5
