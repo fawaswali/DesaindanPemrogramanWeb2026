@@ -1,4 +1,4 @@
-# LAPORAN JOBSHEET 1 DESAIN DAN PEMROGRAMAN WEB
+# LAPORAN JOBSHEET 2 DESAIN DAN PEMROGRAMAN WEB
 
 ## Nama:Fawas Saqif Abdullohil Wali
 ## NIM:254107020037
@@ -37,11 +37,10 @@
 
 
 ### 3.2 Hasil Output kode program list Buku
+<img width="1620" height="843" alt="Cuplikan layar 2026-08-30 130612" src="https://github.com/user-attachments/assets/86669981-9273-480f-8b45-01d68f979b38" />
 
 
 ### 3.3 Modifikasi Kode program list buku
-<img width="727" height="712" alt="Cuplikan layar 2026-08-29 233714" src="https://github.com/user-attachments/assets/9b9f68ba-d21a-4415-96ce-fc2d7fa370c4" />
-<img width="725" height="476" alt="Cuplikan layar 2026-08-29 233724" src="https://github.com/user-attachments/assets/e326d608-c0f1-41fd-8aac-7b4c06accb58" />
 
 ### 3.4 Hasil modifikasi program list buku
 
@@ -55,35 +54,39 @@ Menambahkan tabel body baru untuk menambah jumlah list buku
 
 
 ### 3.6 Hasil Output kode program tambah Buku
-<img width="517" height="832" alt="Cuplikan layar 2026-08-29 231312" src="https://github.com/user-attachments/assets/0fe8d42a-4400-4898-95fe-aa77b22779d3" />
+<img width="1613" height="838" alt="Cuplikan layar 2026-08-30 130519" src="https://github.com/user-attachments/assets/d5f6a572-7aa0-427d-a47e-52f82ff225ce" />
+
 
 ## 4. Anggota
 
 ### 4.1 kode program list Anggota
-<img width="992" height="812" alt="Cuplikan layar 2026-08-29 231656" src="https://github.com/user-attachments/assets/58b5d75c-71c2-4b81-a353-107bba01946a" />
+<img width="855" height="831" alt="Cuplikan layar 2026-08-30 130047" src="https://github.com/user-attachments/assets/426a2392-a111-4cbd-9af1-1351dd59e70e" />
+
 <img width="775" height="699" alt="Cuplikan layar 2026-08-29 231707" src="https://github.com/user-attachments/assets/ca1c67b6-24c7-4bd3-8037-bc70a6709c1e" />
 
 
 ### 4.2 Hasil Output kode program list Anggota
-<img width="595" height="445" alt="Cuplikan layar 2026-08-29 231754" src="https://github.com/user-attachments/assets/b4553ea1-f7e0-4ae8-9067-78e9ead83859" />
+<img width="1614" height="840" alt="Cuplikan layar 2026-08-30 130419" src="https://github.com/user-attachments/assets/66055ca8-ee11-41a6-a853-0f040ca9c410" />
 
 
 ### 4.3 Modifikasi Kode program list Anggota
-<img width="729" height="736" alt="Cuplikan layar 2026-08-29 234411" src="https://github.com/user-attachments/assets/63c2f9f1-66b1-4b8c-9aaf-b9746b74c697" />
+
 
 ### 4.4 Hasil modifikasi program list Anggota
-<img width="570" height="580" alt="Cuplikan layar 2026-08-29 234321" src="https://github.com/user-attachments/assets/7e009f10-3272-4343-a081-ec2567f1b4ed" />
+
 
 ### Penjelasan
 menambah tabel body baru untuk menambah jumlah anggota
 
 
 ### 4.5 kode program tambah Anggota
-<img width="1066" height="806" alt="Cuplikan layar 2026-08-29 231841" src="https://github.com/user-attachments/assets/5db8ca5c-e410-4dc1-a2d0-9b6c69bae8ec" />
+<img width="933" height="832" alt="Cuplikan layar 2026-08-30 130214" src="https://github.com/user-attachments/assets/6b445402-bc3a-4ec3-a23f-4fccefb87823" />
+
 <img width="810" height="518" alt="Cuplikan layar 2026-08-29 231850" src="https://github.com/user-attachments/assets/79d5bfdb-6b89-48ec-8801-27b0ea29f5a2" />
 
 
 ### 4.6 Hasil Output kode program tambah Anggota
-<img width="391" height="701" alt="Cuplikan layar 2026-08-29 231931" src="https://github.com/user-attachments/assets/7344273c-960c-4af5-89a6-9ee9d53fb4fc" />
+<img width="1845" height="842" alt="Cuplikan layar 2026-08-30 130334" src="https://github.com/user-attachments/assets/534a4f3c-35da-44fa-b098-f514e79fc6a6" />
+
 
 
