@@ -25,6 +25,32 @@
 <img width="510" height="798" alt="Cuplikan layar 2026-08-30 123723" src="https://github.com/user-attachments/assets/6e711cad-857f-4fb5-b459-88f9ec60ded8" />
 <img width="508" height="752" alt="Cuplikan layar 2026-08-30 123735" src="https://github.com/user-attachments/assets/7f5ad12a-8f28-4a3c-b340-dc41fa191e22" />
 <img width="469" height="551" alt="Cuplikan layar 2026-08-30 123741" src="https://github.com/user-attachments/assets/0243a63d-4fb8-4b8f-a0ea-df52182ddba1" />
+### 2.2 Modifikasi css 1
+<img width="130" height="28" alt="Cuplikan layar 2026-08-30 133314" src="https://github.com/user-attachments/assets/e8ceb0eb-8c33-4924-8f21-689d4b1c3b1d" />
+### penjelasan
+mengubah warna tema yang semula biru menjadi hijau
+
+### Hasil Modifikasi
+<img width="1607" height="838" alt="Cuplikan layar 2026-08-30 133454" src="https://github.com/user-attachments/assets/fcb11d1e-d176-48ef-866e-4511d7630c26" />
+
+### 2.2 Modifikasi css 2
+<img width="362" height="148" alt="Cuplikan layar 2026-08-30 133934" src="https://github.com/user-attachments/assets/16bfb21f-dcf6-4cc7-9834-e3b30d37e845" />
+<img width="496" height="157" alt="Cuplikan layar 2026-08-30 133944" src="https://github.com/user-attachments/assets/abf77713-9070-4755-b72a-5b2d39f903db" />
+### penjelasan
+Menambahkan kolom keempat di grid kartu statistik. Menambahkan satu <article> baru di HTML (misalnya "Buku Terlambat"), lalu ubah repeat(3, 1fr) menjadi repeat(4, 1fr) di CSS.
+
+### Hasil Modifikasi
+<img width="1612" height="840" alt="Cuplikan layar 2026-08-30 133806" src="https://github.com/user-attachments/assets/069ed26f-fc97-4742-817d-ff1060ac4718" />
+
+### 2.3 Modifikasi css 3
+<img width="593" height="311" alt="Cuplikan layar 2026-08-30 134701" src="https://github.com/user-attachments/assets/5c9befa8-20ae-4cbb-85ed-98efb3000fd5" />
+
+
+### penjelasan
+Membuat tombol ketiga di tabel.Menambahkan tombol "Detail" di antara Edit dan Hapus pada buku/list.html
+
+### Hasil Modifikasi
+<img width="1610" height="835" alt="Cuplikan layar 2026-08-30 134513" src="https://github.com/user-attachments/assets/2420cc3d-34cd-40e6-ac8e-9af30b677f27" />
 
 ## 3. Buku
 
