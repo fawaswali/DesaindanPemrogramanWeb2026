@@ -26,3 +26,16 @@
 
 ### Modifikasi
 
+### Tambah validasi field baru — misalnya field ISBN di form Tambah Buku (yang saat ini tidak wajib diisi, ingat dari dokumentasi jobsheet-01 §4.4) validasi supaya hanya menerima angka dan tanda hubung.
+<img width="841" height="314" alt="image" src="https://github.com/user-attachments/assets/daebf087-5012-46e9-ab9a-08071174c25b" />
+
+<img width="661" height="651" alt="image" src="https://github.com/user-attachments/assets/409ae738-436d-4cb6-80d4-80a90e21f1c8" />
+
+### Tambah animasi sederhana pada initNavToggle — misalnya tambahkan class CSS transition pada header nav di style.css supaya menu terbuka/tertutup dengan efek geser halus, alih-alih langsung muncul/hilang seketika.
+<img width="925" height="399" alt="image" src="https://github.com/user-attachments/assets/284d52ee-898a-494d-9c97-c8dcb371debd" />
+
+### Perluas initTableFilter supaya pencarian bisa dibatasi ke satu kolom saja (misalnya hanya kolom "Judul"), bukan mencari di seluruh teks baris — petunjuk: gunakan row.querySelector("td") seperti pola yang sudah dipakai di bab 5 §5.4, alih-alih row.textContent.
+<img width="848" height="499" alt="image" src="https://github.com/user-attachments/assets/af6b8aa6-535d-458b-958b-9360747cc835" />
+<img width="1177" height="282" alt="image" src="https://github.com/user-attachments/assets/b80e69b4-2ab0-4259-a4c1-f3a1a4ef963f" />
+
+
