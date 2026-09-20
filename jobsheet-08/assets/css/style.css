@@ -4,7 +4,7 @@
     --primary-hover: #1b4332;   /* Hijau lebih gelap saat tombol disorot */
     --primary-light: #e8f5e9;   /* Aksen hijau pastel */
     --bg-body: #ecefe6;         /* Latar halaman: abu kehijauan hangat */
-    --surface: #fdfbf7;         /* Latar kartu/tabel: krem lembut */
+    --surface: #fdfbf7;         /* Latar kartu/tabel: krem lembut (bukan putih polos) */
     --text-main: #22252a;       /* Warna teks utama */
     --text-muted: #5c6470;      /* Warna teks redup untuk sub-judul */
     --border-color: #d6dbd2;    /* Warna garis tepi/pembatas */
@@ -19,6 +19,7 @@
 }
 
 body {
+    /* Menggunakan font bawaan OS: Segoe UI (Windows), San Francisco (Mac) */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--text-main);
     background-color: var(--bg-body);
@@ -157,12 +158,12 @@ td button {
 }
 
 td button:first-of-type {
-    background-color: #d97706;
+    background-color: #d97706; /* Kuning sawo / amber */
     color: #fff;
 }
 
 td button:last-of-type {
-    background-color: #dc2626;
+    background-color: #dc2626; /* Merah bata */
     color: #fff;
 }
 
