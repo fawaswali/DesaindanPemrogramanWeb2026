@@ -6,24 +6,26 @@
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #2b2b2b;
-    background-color: #f5f6f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #22252a;
+    background-color: #ecefe6;
     line-height: 1.5;
 }
 
 a {
-    color: #1d5b8a;
+    color: #1f6f78;
     text-decoration: none;
+    font-weight: 600;
 }
 
 a:hover {
+    color: #14494f;
     text-decoration: underline;
 }
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #1f6f78;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -33,7 +35,8 @@ header {
 }
 
 header h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 header nav ul {
@@ -45,6 +48,11 @@ header nav ul {
 header nav a {
     color: #fff;
     font-weight: 500;
+    padding: 0.3rem 0.5rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 /* ===== Main Layout ===== */
@@ -55,16 +63,18 @@ main {
 }
 
 section {
-    background-color: #fff;
-    border-radius: 8px;
+    background-color: #fdfbf7;
+    border: 1px solid #d6dbd2;
+    border-radius: 6px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #1f6f78;
+    font-size: 1.2rem;
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
@@ -79,22 +89,23 @@ main section:nth-of-type(2) h2 {
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
-    border-radius: 8px;
+    background-color: #e6f3f4;
+    border: 1px solid #cce5e7;
+    border-radius: 6px;
     padding: 1.25rem;
     text-align: center;
 }
 
 main section:nth-of-type(2) article h3 {
-    font-size: 0.95rem;
-    color: #55677a;
+    font-size: 0.9rem;
+    color: #5c6470;
     margin-bottom: 0.5rem;
 }
 
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #1f6f78;
 }
 
 /* ===== Tabel ===== */
@@ -105,21 +116,21 @@ table {
 
 th, td {
     text-align: left;
-    padding: 0.65rem 0.75rem;
-    border-bottom: 1px solid #e2e6ea;
+    padding: 0.75rem;
+    border-bottom: 1px solid #d6dbd2;
 }
 
 thead {
-    background-color: #1d5b8a;
-    color: #fff;
+    background-color: #dbe4df;
+    color: #1e293b;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f7f9fb;
+    background-color: #f4f6f0;
 }
 
 tbody tr:hover {
-    background-color: #eef4fa;
+    background-color: #eaeee5;
 }
 
 td button {
@@ -132,12 +143,12 @@ td button {
 }
 
 td button:first-of-type {
-    background-color: #f0ad4e;
+    background-color: #d97706;
     color: #fff;
 }
 
 td button:last-of-type {
-    background-color: #d9534f;
+    background-color: #dc2626;
     color: #fff;
 }
 
@@ -150,7 +161,7 @@ form label {
     display: block;
     margin-bottom: 0.35rem;
     font-weight: 600;
-    color: #444;
+    color: #22252a;
 }
 
 form input,
@@ -158,31 +169,41 @@ form select {
     width: 100%;
     max-width: 400px;
     padding: 0.55rem 0.7rem;
-    border: 1px solid #cdd4da;
+    border: 1px solid #d6dbd2;
     border-radius: 4px;
-    font-size: 1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #fff;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #1f6f78;
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #1f6f78;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
     border-radius: 4px;
-    font-size: 1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
 }
 
 form button[type="submit"]:hover {
-    background-color: #164869;
+    background-color: #14494f;
 }
 
 /* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 1.25rem;
-    color: #7a8794;
-    font-size: 0.9rem;
+    color: #5c6470;
+    font-size: 0.85rem;
 }
 
 /* ===== Tabel Responsif ===== */
@@ -193,7 +214,7 @@ footer {
 /* ===== Hamburger Menu (JS-driven) ===== */
 .nav-toggle-label {
     display: none;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #fff;
     background: none;
     border: none;
@@ -203,7 +224,7 @@ footer {
 /* ===== Pesan Error Validasi ===== */
 .error {
     display: block;
-    color: #d9534f;
+    color: #dc2626;
     font-size: 0.85rem;
     margin-top: 0.25rem;
 }
@@ -217,8 +238,14 @@ footer {
     width: 100%;
     max-width: 320px;
     padding: 0.5rem 0.75rem;
-    border: 1px solid #cdd4da;
+    border: 1px solid #d6dbd2;
     border-radius: 4px;
+    font-family: inherit;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #1f6f78;
 }
 
 /* ===== Responsive Breakpoints ===== */
