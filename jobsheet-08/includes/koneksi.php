@@ -1,5 +1,5 @@
 <?php
-$host = getenv('DB_HOST') ?: 'aws-0-ap-southeast-1.pooler.supabase.com';
+$host = getenv('DB_HOST') ?: 'aws-0-ap-northeast-2.pooler.supabase.com';
 $port = getenv('DB_PORT') ?: '6543';
 $dbname = getenv('DB_NAME') ?: 'postgres';
 $user = getenv('DB_USER') ?: 'postgres.mpycrxqzjfmqqafoxpew';
