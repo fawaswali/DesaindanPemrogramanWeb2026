@@ -1,4 +1,4 @@
-// ===== Hamburger menu (JS-driven, menggantikan checkbox hack) =====
+// ===== Hamburger menu (JS-driven) =====
 function initNavToggle() {
     const toggleBtn = document.getElementById("nav-toggle-btn");
     const nav = document.querySelector("header nav");
@@ -9,17 +9,14 @@ function initNavToggle() {
     });
 }
 
-// ===== Konfirmasi hapus (front-end only, belum ke server) =====
-// Memakai event delegation di document karena baris tabel sekarang
-// dirender dinamis via fetch (lihat buku.js/anggota.js) sehingga
-// tombol .btn-hapus belum tentu ada saat DOMContentLoaded.
+// ===== Konfirmasi hapus (front-end) =====
 function initHapusConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-hapus");
         if (!btn) return;
 
         const row = btn.closest("tr");
-        const nama = row ? row.querySelector("td")?.textContent : "data ini";
+        const nama = row ? row.querySelector("td")?.textContent.trim() : "data ini";
         const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
         if (yakin && row) {
             row.remove();
@@ -43,11 +40,15 @@ function initTableFilter() {
     });
 }
 
-// ===== Validasi form (client-side) =====
+// ===== Helper pesan error validasi =====
 function tampilkanError(input, pesan) {
     hapusError(input);
     const span = document.createElement("span");
     span.className = "error";
+    span.style.color = "#c53030";
+    span.style.fontSize = "12px";
+    span.style.display = "block";
+    span.style.marginTop = "4px";
     span.textContent = pesan;
     input.insertAdjacentElement("afterend", span);
 }
@@ -59,48 +60,68 @@ function hapusError(input) {
     }
 }
 
+// ===== Validasi form Kost Mini (Kamar & Penghuni) =====
 function initValidasiForm() {
-    const form = document.getElementById("form-tambah");
+    // Menangani form tambah (baik id='form-tambah' maupun form standar di halaman)
+    const form = document.getElementById("form-tambah") || document.querySelector("form");
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
         let valid = true;
 
-        const judul = form.querySelector("[name='judul'], [name='nama']");
-        if (judul && judul.value.trim() === "") {
-            tampilkanError(judul, "Field ini wajib diisi.");
-            valid = false;
-        } else if (judul) {
-            hapusError(judul);
-        }
-
-        const pengarang = form.querySelector("[name='pengarang']");
-        if (pengarang && pengarang.value.trim() === "") {
-            tampilkanError(pengarang, "Pengarang wajib diisi.");
-            valid = false;
-        } else if (pengarang) {
-            hapusError(pengarang);
-        }
-
-        const tahun = form.querySelector("[name='tahun']");
-        if (tahun) {
-            const nilai = parseInt(tahun.value, 10);
-            if (isNaN(nilai) || nilai < 1900 || nilai > 2026) {
-                tampilkanError(tahun, "Tahun harus di antara 1900-2026.");
+        // 1. Validasi Nomor Kamar (Jika ada di form)
+        const nomorKamar = form.querySelector("[name='nomor_kamar']");
+        if (nomorKamar) {
+            if (nomorKamar.value.trim() === "") {
+                tampilkanError(nomorKamar, "Nomor kamar wajib diisi.");
                 valid = false;
             } else {
-                hapusError(tahun);
+                hapusError(nomorKamar);
             }
         }
 
-        const stok = form.querySelector("[name='stok']");
-        if (stok) {
-            const nilai = parseInt(stok.value, 10);
-            if (isNaN(nilai) || nilai < 0) {
-                tampilkanError(stok, "Stok tidak boleh negatif.");
+        // 2. Validasi Harga Bulanan (Kamar)
+        const harga = form.querySelector("[name='harga_bulanan']");
+        if (harga) {
+            const nilai = parseInt(harga.value, 10);
+            if (isNaN(nilai) || nilai <= 0) {
+                tampilkanError(harga, "Harga bulanan harus angka positif.");
                 valid = false;
             } else {
-                hapusError(stok);
+                hapusError(harga);
+            }
+        }
+
+        // 3. Validasi NIK (Penghuni)
+        const nik = form.querySelector("[name='nik']");
+        if (nik) {
+            if (nik.value.trim().length < 8) {
+                tampilkanError(nik, "NIK minimal 8 digit.");
+                valid = false;
+            } else {
+                hapusError(nik);
+            }
+        }
+
+        // 4. Validasi Nama Lengkap (Penghuni)
+        const nama = form.querySelector("[name='nama']");
+        if (nama) {
+            if (nama.value.trim() === "") {
+                tampilkanError(nama, "Nama lengkap wajib diisi.");
+                valid = false;
+            } else {
+                hapusError(nama);
+            }
+        }
+
+        // 5. Validasi Nomor HP / WhatsApp
+        const noHp = form.querySelector("[name='no_telepon']");
+        if (noHp) {
+            if (noHp.value.trim() === "") {
+                tampilkanError(noHp, "Nomor kontak wajib diisi.");
+                valid = false;
+            } else {
+                hapusError(noHp);
             }
         }
 
@@ -110,6 +131,7 @@ function initValidasiForm() {
     });
 }
 
+// Inisialisasi semua script saat halaman selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
     initNavToggle();
     initHapusConfirm();

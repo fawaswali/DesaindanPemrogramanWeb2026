@@ -1,29 +1,28 @@
 <?php
-$page_title = "Beranda";
+$page_title = "Beranda Kost Mini";
 include __DIR__ . '/includes/header.php';
 require __DIR__ . '/includes/koneksi.php';
 
-$totalBuku = $pdo->query("SELECT COUNT(*) FROM buku")->fetchColumn();
-$totalAnggota = $pdo->query("SELECT COUNT(*) FROM anggota")->fetchColumn();
+$totalKamar    = $pdo->query("SELECT COUNT(*) FROM kamar")->fetchColumn();
+$totalPenghuni = $pdo->query("SELECT COUNT(*) FROM penghuni")->fetchColumn();
+$kamarKosong   = $pdo->query("SELECT COUNT(*) FROM kamar WHERE status = 'Tersedia'")->fetchColumn();
 ?>
-        <section>
-            <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
-            <p>Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-        </section>
+<section>
+    <h2>Dashboard Kost Mini</h2>
+    <p>Selamat datang di sistem informasi pengelolaan kamar dan penghuni kost.</p>
+    
+    <div class="stats-grid">
+        <div class="stat-card stat-card-kamar">
+            <h3>Total Kamar</h3>
+            <p class="stat-number"><?php echo $totalKamar; ?> <span>Unit</span></p>
+            <small class="stat-subtext">Tersedia: <?php echo $kamarKosong; ?> Kamar</small>
+        </div>
 
-        <section>
-            <h2>Ringkasan</h2>
-            <article>
-                <h3>Total Buku</h3>
-                <p><?php echo $totalBuku; ?></p>
-            </article>
-            <article>
-                <h3>Total Anggota</h3>
-                <p><?php echo $totalAnggota; ?></p>
-            </article>
-            <article>
-                <h3>Sedang Dipinjam</h3>
-                <p>0</p>
-            </article>
-        </section>
+        <div class="stat-card stat-card-penghuni">
+            <h3>Total Penghuni</h3>
+            <p class="stat-number"><?php echo $totalPenghuni; ?> <span>Orang</span></p>
+            <small class="stat-subtext stat-subtext-muted">Terdaftar aktif</small>
+        </div>
+    </div>
+</section>
 <?php include __DIR__ . '/includes/footer.php'; ?>
