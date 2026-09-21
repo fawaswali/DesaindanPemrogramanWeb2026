@@ -2,19 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "**/*.php",
+      "src": "jobsheet-07/*.php",
       "use": "vercel-php@0.7.3"
     },
     {
-      "src": "**/*.html",
-      "use": "@vercel/static"
+      "src": "jobsheet-08/index.php",
+      "use": "vercel-php@0.7.3"
     },
     {
-      "src": "**/*.css",
-      "use": "@vercel/static"
+      "src": "jobsheet-08/kamar/*.php",
+      "use": "vercel-php@0.7.3"
     },
     {
-      "src": "**/*.js",
+      "src": "jobsheet-08/penghuni/*.php",
+      "use": "vercel-php@0.7.3"
+    },
+    {
+      "src": "**/*.{html,css,js,png,jpg,svg}",
       "use": "@vercel/static"
     }
   ],
