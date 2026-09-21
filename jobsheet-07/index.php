@@ -10,7 +10,7 @@ try {
     $totalKamar = $pdo->query("SELECT COUNT(*) FROM kamar")->fetchColumn();
     $totalPenghuni = $pdo->query("SELECT COUNT(*) FROM penghuni")->fetchColumn();
 } catch (Exception $e) {
-    // Abaikan jika tabel kosong
+    // Tangani jika tabel belum terisi data
 }
 ?>
 
@@ -18,20 +18,20 @@ try {
   <h2>Dashboard Kost Papa</h2>
   <p style="color: #94a3b8; margin-bottom: 1.5rem;">Selamat datang di sistem manajemen Kost Papa.</p>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem;">
-    <div style="background: #09132b; border: 1px solid #1e293b; padding: 1.25rem; border-radius: 8px;">
-      <span style="color: #94a3b8; font-size: 0.85rem;">Total Kamar</span>
-      <h3 style="font-size: 1.75rem; color: #38bdf8; margin-top: 0.25rem;"><?= $totalKamar ?></h3>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span>Total Kamar</span>
+      <div class="value"><?= $totalKamar ?></div>
     </div>
-    <div style="background: #09132b; border: 1px solid #1e293b; padding: 1.25rem; border-radius: 8px;">
-      <span style="color: #94a3b8; font-size: 0.85rem;">Total Penghuni Aktif</span>
-      <h3 style="font-size: 1.75rem; color: #38bdf8; margin-top: 0.25rem;"><?= $totalPenghuni ?></h3>
+    <div class="stat-card">
+      <span>Total Penghuni Aktif</span>
+      <div class="value"><?= $totalPenghuni ?></div>
     </div>
   </div>
 
   <div style="display: flex; gap: 0.75rem;">
     <a href="/jobsheet-07/kamar/list.php" class="btn-action">Kelola Kamar &rarr;</a>
-    <a href="/jobsheet-07/penghuni/list.php" class="btn-action" style="background: #1e293b;">Kelola Penghuni &rarr;</a>
+    <a href="/jobsheet-07/penghuni/list.php" class="btn-action btn-secondary">Kelola Penghuni &rarr;</a>
   </div>
 </main>
 

@@ -1,24 +1,38 @@
 <?php
-// jobsheet-07/includes/header.php
+$pageTitle = "Dashboard - Kost Papa";
+require_once __DIR__ . '/includes/koneksi.php';
+require_once __DIR__ . '/includes/header.php';
+
+$totalKamar = 0;
+$totalPenghuni = 0;
+
+try {
+    $totalKamar = $pdo->query("SELECT COUNT(*) FROM kamar")->fetchColumn();
+    $totalPenghuni = $pdo->query("SELECT COUNT(*) FROM penghuni")->fetchColumn();
+} catch (Exception $e) {
+    // Tangani jika tabel belum terisi data
+}
 ?>
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= $pageTitle ?? 'Sistem Kost Papa' ?></title>
-  <link rel="stylesheet" href="/jobsheet-07/assets/css/style.css">
-</head>
-<body>
-<div class="wrapper">
-  <header class="navbar">
-    <a href="/jobsheet-07/index.php" class="brand">Sistem Kost Papa</a>
-    <nav class="nav-buttons">
-      <a href="/jobsheet-07/index.php" class="nav-btn">Beranda</a>
-      <a href="/jobsheet-07/kamar/list.php" class="nav-btn">Daftar Kamar</a>
-      <a href="/jobsheet-07/kamar/tambah.php" class="nav-btn">Tambah Kamar</a>
-      <a href="/jobsheet-07/penghuni/list.php" class="nav-btn">Daftar Penghuni</a>
-      <a href="/jobsheet-07/penghuni/tambah.php" class="nav-btn">Tambah Penghuni</a>
-      <a href="/index.html" class="nav-btn">Portal</a>
-    </nav>
-  </header>
+
+<main class="card-box">
+  <h2>Dashboard Kost Papa</h2>
+  <p style="color: #94a3b8; margin-bottom: 1.5rem;">Selamat datang di sistem manajemen Kost Papa.</p>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span>Total Kamar</span>
+      <div class="value"><?= $totalKamar ?></div>
+    </div>
+    <div class="stat-card">
+      <span>Total Penghuni Aktif</span>
+      <div class="value"><?= $totalPenghuni ?></div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 0.75rem;">
+    <a href="/jobsheet-07/kamar/list.php" class="btn-action">Kelola Kamar &rarr;</a>
+    <a href="/jobsheet-07/penghuni/list.php" class="btn-action btn-secondary">Kelola Penghuni &rarr;</a>
+  </div>
+</main>
+
+<?php require_once __DIR__ . '/includes/footer.php'; ?>
