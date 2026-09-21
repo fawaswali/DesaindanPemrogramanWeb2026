@@ -1,69 +1,271 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kumpulan Tugas Jobsheet</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-        .card {
-            background: #ffffff;
-            max-width: 500px;
-            width: 100%;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        h1 {
-            font-size: 1.4rem;
-            color: #1d5b8a;
-            margin-bottom: 1.5rem;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        li {
-            margin-bottom: 0.75rem;
-        }
-        a {
-            display: block;
-            padding: 0.75rem 1rem;
-            background: #eef4fa;
-            color: #1d5b8a;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-        a:hover {
-            background: #1d5b8a;
-            color: #ffffff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Praktikum Pemrograman Web</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #142033, #0b111e);
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 2.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 960px;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: rgba(30, 41, 59, 0.65);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 4px solid var(--accent-color);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-color);
+      box-shadow: 0 10px 25px -5px var(--glow-color);
+    }
+
+    .card-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .card-footer {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Variasi Warna Kartu */
+    .color-blue {
+      --accent-color: #38bdf8;
+      --glow-color: rgba(56, 189, 248, 0.25);
+    }
+
+    .color-emerald {
+      --accent-color: #34d399;
+      --glow-color: rgba(52, 211, 153, 0.25);
+    }
+
+    .color-amber {
+      --accent-color: #fbbf24;
+      --glow-color: rgba(251, 191, 36, 0.25);
+    }
+
+    .color-indigo {
+      --accent-color: #818cf8;
+      --glow-color: rgba(129, 140, 248, 0.25);
+    }
+
+    .color-rose {
+      --accent-color: #fb7185;
+      --glow-color: rgba(251, 113, 133, 0.25);
+    }
+
+    .color-violet {
+      --accent-color: #a78bfa;
+      --glow-color: rgba(167, 139, 250, 0.25);
+    }
+
+    .color-teal {
+      --accent-color: #2dd4bf;
+      --glow-color: rgba(45, 212, 191, 0.25);
+    }
+
+    .color-orange {
+      --accent-color: #fb923c;
+      --glow-color: rgba(251, 146, 60, 0.25);
+    }
+
+    .color-primary {
+      --accent-color: #38bdf8;
+      --glow-color: rgba(56, 189, 248, 0.35);
+      background: linear-gradient(145deg, rgba(30, 58, 138, 0.4), rgba(15, 23, 42, 0.85));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      border-top: 4px solid #38bdf8;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Daftar Tugas Praktikum</h1>
-        <ul>
-            <li><a href="jobsheet-01/index.html">Jobsheet 1</a></li>
-            <li><a href="jobsheet-02/index.html">Jobsheet 2</a></li>
-            <li><a href="jobsheet-03/index.html">Jobsheet 3</a></li>
-            <li><a href="jobsheet-03-Bootstap/">Jobsheet 3Bootstrap</a></li>
-            <li><a href="jobsheet-04/index.html">Jobsheet 4</a></li>
-            <li><a href="jobsheet-05/index.html">Jobsheet 5</a></li>
-            <li><a href="jobsheet-06/index.html">Jobsheet 6</a></li>
-            <li><a href="jobsheet-07/index.php">Jobsheet 7</a></li>
-            <li><a href="jobsheet-08/index.php">Jobsheet 8</a></li>
-        </ul>
+
+  <div class="container">
+    <header>
+      <h1>Portal Praktikum</h1>
+      <p>Kumpulan tugas Desain dan Pemrograman Web</p>
+    </header>
+
+    <div class="grid">
+      <!-- Jobsheet 1 (Biru) -->
+      <a href="jobsheet-01/index.html" class="card color-blue">
+        <div>
+          <span class="card-badge">Tugas 01</span>
+          <div class="card-title">Jobsheet 1</div>
+          <div class="card-desc">Pengenalan HTML dasar dan struktur dokumen.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 2 (Hijau Emerald) -->
+      <a href="jobsheet-02/index.html" class="card color-emerald">
+        <div>
+          <span class="card-badge">Tugas 02</span>
+          <div class="card-title">Jobsheet 2</div>
+          <div class="card-desc">Format teks, tabel, list, dan hyperlink HTML.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 3 (Kuning Amber) -->
+      <a href="jobsheet-03/index.html" class="card color-amber">
+        <div>
+          <span class="card-badge">Tugas 03</span>
+          <div class="card-title">Jobsheet 3</div>
+          <div class="card-desc">Styling antarmuka web menggunakan CSS dasar.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 3 Bootstrap (Ungu Indigo) -->
+      <a href="jobsheet-03-Bootstap/" class="card color-indigo">
+        <div>
+          <span class="card-badge">Tugas 03B</span>
+          <div class="card-title">Jobsheet 3 Bootstrap</div>
+          <div class="card-desc">Implementasi framework CSS Bootstrap.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 4 (Merah Muda Rose) -->
+      <a href="jobsheet-04/index.html" class="card color-rose">
+        <div>
+          <span class="card-badge">Tugas 04</span>
+          <div class="card-title">Jobsheet 4</div>
+          <div class="card-desc">Desain responsif dan manipulasi tata letak.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 5 (Violet) -->
+      <a href="jobsheet-05/index.html" class="card color-violet">
+        <div>
+          <span class="card-badge">Tugas 05</span>
+          <div class="card-title">Jobsheet 5</div>
+          <div class="card-desc">Studi kasus dan layout lanjutan.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 6 (Teal) -->
+      <a href="jobsheet-06/index.html" class="card color-teal">
+        <div>
+          <span class="card-badge">Tugas 06</span>
+          <div class="card-title">Jobsheet 6</div>
+          <div class="card-desc">Formulir interaktif dan validasi input data.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 7 (Oranye) -->
+      <a href="jobsheet-07/index.php" class="card color-orange">
+        <div>
+          <span class="card-badge">Tugas 07</span>
+          <div class="card-title">Jobsheet 7</div>
+          <div class="card-desc">Pemrosesan data form dinamis menggunakan PHP.</div>
+        </div>
+        <div class="card-footer">Buka Halaman &rarr;</div>
+      </a>
+
+      <!-- Jobsheet 8 (Kost Papa - Proyek Utama) -->
+      <a href="jobsheet-08/index.php" class="card color-primary">
+        <div>
+          <span class="card-badge">Database &bull; PostgreSQL</span>
+          <div class="card-title">Jobsheet 8 (Kost Papa)</div>
+          <div class="card-desc">Sistem CRUD manajemen kamar dan penghuni terintegrasi Supabase.</div>
+        </div>
+        <div class="card-footer">Akses Sistem &rarr;</div>
+      </a>
     </div>
+
+    <footer>
+      &copy; 2026 Praktikum Desain &amp; Pemrograman Web
+    </footer>
+  </div>
+
 </body>
 </html>
