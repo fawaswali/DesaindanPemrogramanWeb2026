@@ -3,7 +3,7 @@ $pageTitle = "Daftar Penghuni - Kost Papa";
 require_once __DIR__ . '/../includes/koneksi.php';
 require_once __DIR__ . '/../includes/header.php';
 
-$stmt = $pdo->query("SELECT p.*, k.nomor_kamar FROM penghuni p LEFT JOIN kamar k ON p.id_kamar = k.id_kamar ORDER BY p.id_penghuni ASC");
+$stmt = $pdo->query("SELECT * FROM penghuni ORDER BY 1 ASC");
 $penghuni = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
