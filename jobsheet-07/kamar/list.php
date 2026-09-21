@@ -30,7 +30,7 @@ $kamar = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <tr>
             <td><b><?= htmlspecialchars($k['nomor_kamar'] ?? '-') ?></b></td>
             <td><?= htmlspecialchars($k['tipe_kamar'] ?? '-') ?></td>
-            <td>Rp <?= number_format($k['harga'] ?? 0, 0, ',', '.') ?></td>
+           <td>Rp <?= number_format($k['harga_bulanan'] ?? 0, 0, ',', '.') ?></td>
             <td><span style="color: #38bdf8;"><?= htmlspecialchars($k['status'] ?? '-') ?></span></td>
           </tr>
         <?php endforeach; ?>

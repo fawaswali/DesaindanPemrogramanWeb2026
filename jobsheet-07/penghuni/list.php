@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
 $page_title = "Daftar Penghuni";
 require_once __DIR__ . '/../includes/koneksi.php';
 require_once __DIR__ . '/../includes/header.php';
@@ -14,12 +15,6 @@ $daftarPenghuni = $pdo->query("SELECT * FROM penghuni ORDER BY id DESC")->fetchA
     <h2>Daftar Penghuni Kost</h2>
     <a href="tambah.php" class="btn-action">+ Tambah Penghuni</a>
   </div>
-
-  <?php if ($flash): ?>
-    <p style="padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem; background: rgba(56, 189, 248, 0.2); color: #38bdf8;">
-      <?= htmlspecialchars($flash['pesan']); ?>
-    </p>
-  <?php endif; ?>
 
   <div style="overflow-x: auto;">
     <table>
@@ -45,7 +40,15 @@ $daftarPenghuni = $pdo->query("SELECT * FROM penghuni ORDER BY id DESC")->fetchA
               <td><?= htmlspecialchars($p['no_telepon']); ?></td>
               <td><?= htmlspecialchars($p['pekerjaan']); ?></td>
               <td>
-                <?= !empty($p['tanggal_daftar']) ? date('d-m-Y H:i', strtotime($p['tanggal_daftar'])) : '-'; ?>
+                <?php 
+                  if (!empty($p['tanggal_daftar'])) {
+                      $dt = new DateTime($p['tanggal_daftar']);
+                      $dt->setTimezone(new DateTimeZone('Asia/Jakarta'));
+                      echo $dt->format('d-m-Y H:i') . ' WIB';
+                  } else {
+                      echo '-';
+                  }
+                ?>
               </td>
             </tr>
           <?php endforeach; ?>
