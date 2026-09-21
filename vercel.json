@@ -18,14 +18,8 @@
       "use": "vercel-php@0.7.3"
     },
     {
-      "src": "**/*.{html,css,js,png,jpg,svg}",
+      "src": "**/*.*",
       "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
     }
   ]
 }
