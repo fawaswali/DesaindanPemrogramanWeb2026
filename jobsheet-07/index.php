@@ -28,11 +28,6 @@ try {
       <div class="value"><?= $totalPenghuni ?></div>
     </div>
   </div>
-
-  <div style="display: flex; gap: 0.75rem;">
-    <a href="/jobsheet-07/kamar/list.php" class="btn-action">Kelola Kamar &rarr;</a>
-    <a href="/jobsheet-07/penghuni/list.php" class="btn-action btn-secondary">Kelola Penghuni &rarr;</a>
-  </div>
 </main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

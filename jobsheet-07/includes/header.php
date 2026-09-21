@@ -12,13 +12,12 @@
 <body>
 <div class="wrapper">
   <header class="navbar">
-    <a href="/jobsheet-07/index.php" class="brand">Sistem Kost Papa</a>
+    <a href="/jobsheet-07/index.php" class="brand">Kost Papa</a>
     <nav class="nav-buttons">
       <a href="/jobsheet-07/index.php" class="nav-btn">Beranda</a>
       <a href="/jobsheet-07/kamar/list.php" class="nav-btn">Daftar Kamar</a>
       <a href="/jobsheet-07/kamar/tambah.php" class="nav-btn">Tambah Kamar</a>
       <a href="/jobsheet-07/penghuni/list.php" class="nav-btn">Daftar Penghuni</a>
       <a href="/jobsheet-07/penghuni/tambah.php" class="nav-btn">Tambah Penghuni</a>
-      <a href="/index.html" class="nav-btn">Portal</a>
     </nav>
   </header>
