@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Sistem Kost Mini</div>
+        <div class="logo">Kost Papa</div>
         <nav>
             <a href="<?php echo $base ?? '/jobsheet-08/'; ?>index.php">Beranda</a>
             <a href="<?php echo $base ?? '/jobsheet-08/'; ?>kamar/list.php">Daftar Kamar</a>

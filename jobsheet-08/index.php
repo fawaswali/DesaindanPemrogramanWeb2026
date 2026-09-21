@@ -8,7 +8,7 @@ $totalPenghuni = $pdo->query("SELECT COUNT(*) FROM penghuni")->fetchColumn();
 $kamarKosong   = $pdo->query("SELECT COUNT(*) FROM kamar WHERE status = 'Tersedia'")->fetchColumn();
 ?>
 <section>
-    <h2>Dashboard Kost Mini</h2>
+    <h2>Dashboard Kost Papa</h2>
     <p>Selamat datang di sistem informasi pengelolaan kamar dan penghuni kost.</p>
     
     <div class="stats-grid">
