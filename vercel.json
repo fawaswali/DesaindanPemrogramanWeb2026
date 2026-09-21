@@ -6,7 +6,15 @@
       "use": "vercel-php@0.7.3"
     },
     {
-      "src": "jobsheet-08/index.php",
+      "src": "jobsheet-07/kamar/*.php",
+      "use": "vercel-php@0.7.3"
+    },
+    {
+      "src": "jobsheet-07/penghuni/*.php",
+      "use": "vercel-php@0.7.3"
+    },
+    {
+      "src": "jobsheet-08/*.php",
       "use": "vercel-php@0.7.3"
     },
     {
