@@ -1,25 +1,16 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "jobsheet-07/*.php",
-      "use": "vercel-php@0.7.3"
-    },
-    {
-      "src": "jobsheet-07/*/*.php",
-      "use": "vercel-php@0.7.3"
-    },
-    {
-      "src": "jobsheet-08/*.php",
-      "use": "vercel-php@0.7.3"
-    },
-    {
-      "src": "jobsheet-08/*/*.php",
-      "use": "vercel-php@0.7.3"
-    },
-    {
-      "src": "**/*.*",
-      "use": "@vercel/static"
-    }
+    { "src": "jobsheet-07/index.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-07/kamar/list.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-07/kamar/tambah.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-07/penghuni/list.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-07/penghuni/tambah.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-08/index.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-08/kamar/index.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-08/kamar/tambah.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-08/penghuni/index.php", "use": "vercel-php@0.7.3" },
+    { "src": "jobsheet-08/penghuni/tambah.php", "use": "vercel-php@0.7.3" },
+    { "src": "**/*.*", "use": "@vercel/static" }
   ]
 }
