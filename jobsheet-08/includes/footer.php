@@ -1,7 +1,7 @@
 </main>
 
     <footer>
-        <p>&copy; 2026 Kost Mini &mdash; Jobsheet 8</p>
+        <p>&copy; 2026 Kost Papa &mdash; Jobsheet 8</p>
     </footer>
     <script src="<?php echo $base; ?>assets/app.js"></script>
     <?php if (!empty($extra_scripts)): foreach ($extra_scripts as $src): ?>
