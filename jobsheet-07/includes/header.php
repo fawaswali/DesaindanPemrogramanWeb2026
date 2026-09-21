@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Dashboard - Kost Papa";
-require_once __DIR__ . '/includes/koneksi.php';
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/koneksi.php';
+require_once __DIR__ . '/koneksi.php';
 
 $totalKamar = 0;
 $totalPenghuni = 0;
