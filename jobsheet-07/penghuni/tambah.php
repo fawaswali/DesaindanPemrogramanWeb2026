@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (!empty($nik) && !empty($nama)) {
         try {
-            $stmt = $pdo->prepare("INSERT INTO penghuni (nik, nama, no_telepon, pekerjaan, tanggal_daftar) VALUES (?, ?, ?, ?, NOW())");
+            $stmt = $pdo->prepare("INSERT INTO penghuni_j7 (nik, nama, no_telepon, pekerjaan, tanggal_daftar) VALUES (?, ?, ?, ?, NOW())");
             $stmt->execute([$nik, $nama, $no_telepon, $pekerjaan]);
 
             header("Location: list.php");

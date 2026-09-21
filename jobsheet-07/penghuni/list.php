@@ -7,7 +7,7 @@ require_once __DIR__ . '/../includes/header.php';
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 
-$daftarPenghuni = $pdo->query("SELECT * FROM penghuni ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
+$daftarPenghuni = $pdo->query("SELECT * FROM penghuni_j7 ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="card-box">

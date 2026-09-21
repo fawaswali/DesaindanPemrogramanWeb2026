@@ -7,8 +7,8 @@ $totalKamar = 0;
 $totalPenghuni = 0;
 
 try {
-    $totalKamar = $pdo->query("SELECT COUNT(*) FROM kamar")->fetchColumn();
-    $totalPenghuni = $pdo->query("SELECT COUNT(*) FROM penghuni")->fetchColumn();
+    $totalKamar = $pdo->query("SELECT COUNT(*) FROM kamar_j7")->fetchColumn();
+    $totalPenghuni = $pdo->query("SELECT COUNT(*) FROM penghuni_j7")->fetchColumn();
 } catch (Exception $e) {
     // Tangani jika tabel belum terisi data
 }

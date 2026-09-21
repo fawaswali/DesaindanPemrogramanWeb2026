@@ -3,7 +3,7 @@ $pageTitle = "Daftar Kamar - Kost Papa";
 require_once __DIR__ . '/../includes/koneksi.php';
 require_once __DIR__ . '/../includes/header.php';
 
-$stmt = $pdo->query("SELECT * FROM kamar ORDER BY nomor_kamar ASC");
+$stmt = $pdo->query("SELECT * FROM kamar_j7 ORDER BY nomor_kamar ASC");
 $kamar = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
