@@ -1,28 +1,28 @@
 <?php
-$page_title = "Tambah Kamar";
+$page_title = "Tambah Penghuni";
 require_once __DIR__ . '/../includes/koneksi.php';
 
 $error = null;
 
+// Proses simpan langsung saat form disubmit
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nomor_kamar   = trim($_POST['nomor_kamar'] ?? '');
-    $tipe_kamar    = trim($_POST['tipe_kamar'] ?? '');
-    $fasilitas     = trim($_POST['fasilitas'] ?? '');
-    $harga_bulanan = (int)($_POST['harga_bulanan'] ?? 0);
-    $status        = trim($_POST['status'] ?? 'Kosong');
+    $nik        = trim($_POST['nik'] ?? '');
+    $nama       = trim($_POST['nama'] ?? '');
+    $no_telepon = trim($_POST['no_telepon'] ?? '');
+    $pekerjaan  = trim($_POST['pekerjaan'] ?? '');
 
-    if (!empty($nomor_kamar) && $harga_bulanan > 0) {
+    if (!empty($nik) && !empty($nama)) {
         try {
-            $stmt = $pdo->prepare("INSERT INTO kamar (nomor_kamar, tipe_kamar, fasilitas, harga_bulanan, status, tanggal_ditambahkan) VALUES (?, ?, ?, ?, ?, NOW())");
-            $stmt->execute([$nomor_kamar, $tipe_kamar, $fasilitas, $harga_bulanan, $status]);
+            $stmt = $pdo->prepare("INSERT INTO penghuni (nik, nama, no_telepon, pekerjaan, tanggal_daftar) VALUES (?, ?, ?, ?, NOW())");
+            $stmt->execute([$nik, $nama, $no_telepon, $pekerjaan]);
 
-            header("Location: index.php");
+            header("Location: list.php");
             exit;
         } catch (PDOException $e) {
             $error = "Gagal menyimpan: " . $e->getMessage();
         }
     } else {
-        $error = "Nomor kamar dan harga bulanan wajib diisi.";
+        $error = "NIK dan Nama wajib diisi.";
     }
 }
 
@@ -30,7 +30,7 @@ require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <div class="card-box" style="max-width: 600px; margin: 0 auto;">
-  <h2>Tambah Kamar Baru</h2>
+  <h2>Tambah Penghuni Baru</h2>
 
   <?php if ($error): ?>
     <div style="background: rgba(239, 68, 68, 0.2); border: 1px solid #ef4444; color: #f87171; padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem;">
@@ -38,35 +38,25 @@ require_once __DIR__ . '/../includes/header.php';
     </div>
   <?php endif; ?>
 
+  <!-- Action dikosongkan agar kirim ke file yang sama -->
   <form action="" method="POST">
     <div class="form-group">
-      <label for="nomor_kamar">Nomor Kamar</label>
-      <input type="text" id="nomor_kamar" name="nomor_kamar" placeholder="Contoh: A01" required>
+      <label for="nik">NIK</label>
+      <input type="text" id="nik" name="nik" placeholder="Nomor Induk Kependudukan (16 digit)" required>
     </div>
     <div class="form-group">
-      <label for="tipe_kamar">Tipe Kamar</label>
-      <select id="tipe_kamar" name="tipe_kamar">
-        <option value="Reguler">Reguler</option>
-        <option value="Deluxe">Deluxe</option>
-        <option value="VIP">VIP</option>
-      </select>
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama penghuni" required>
     </div>
     <div class="form-group">
-      <label for="fasilitas">Fasilitas</label>
-      <input type="text" id="fasilitas" name="fasilitas" placeholder="Contoh: Kasur, Lemari, Wi-Fi" required>
+      <label for="no_telepon">No. Telepon / WhatsApp</label>
+      <input type="text" id="no_telepon" name="no_telepon" placeholder="Contoh: 08123456789" required>
     </div>
     <div class="form-group">
-      <label for="harga_bulanan">Harga per Bulan (Rp)</label>
-      <input type="number" id="harga_bulanan" name="harga_bulanan" placeholder="Contoh: 850000" required>
+      <label for="pekerjaan">Pekerjaan / Instansi</label>
+      <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Contoh: Mahasiswa / Karyawan" required>
     </div>
-    <div class="form-group">
-      <label for="status">Status</label>
-      <select id="status" name="status">
-        <option value="Kosong">Kosong</option>
-        <option value="Terisi">Terisi</option>
-      </select>
-    </div>
-    <button type="submit" class="btn-action" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">Simpan Kamar</button>
+    <button type="submit" class="btn-action" style="width: 100%; padding: 0.75rem; margin-top: 0.5rem;">Simpan Penghuni</button>
   </form>
 </div>
 
