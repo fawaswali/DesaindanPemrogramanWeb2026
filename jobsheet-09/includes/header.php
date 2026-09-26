@@ -3,10 +3,15 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-$__jobsheetRoot = dirname(__DIR__);
-$__scriptDir = dirname($_SERVER['SCRIPT_FILENAME'] ?? __FILE__);
-$__rel = ltrim(str_replace('\\', '/', substr($__scriptDir, strlen($__jobsheetRoot))), '/');
-$base = $__rel === '' ? '' : str_repeat('../', substr_count($__rel, '/') + 1);
+// Gunakan REQUEST_URI untuk menghitung kedalaman path secara akurat di Vercel
+$currentUri = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
+
+// Jika sedang berada di dalam subfolder (kamar/ atau penghuni/), mundur 1 tingkat (../)
+if (strpos($currentUri, '/kamar/') !== false || strpos($currentUri, '/penghuni/') !== false) {
+    $base = '../';
+} else {
+    $base = '';
+}
 ?>
 <!DOCTYPE html>
 <html lang="id">

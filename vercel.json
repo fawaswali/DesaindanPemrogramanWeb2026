@@ -12,15 +12,15 @@
   ],
   "routes": [
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(jobsheet-.*\\.php.*)",
       "dest": "/api/index.php"
     },
     {
       "src": "/(jobsheet-[^/]+/?)$",
       "dest": "/api/index.php"
-    },
-    {
-      "handle": "filesystem"
     }
   ]
 }
