@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "jobsheet-07/**/*.php", "use": "vercel-php@0.7.3" },
-    { "src": "jobsheet-08/**/*.php", "use": "vercel-php@0.7.3" },
-    { "src": "jobsheet-09/**/*.php", "use": "vercel-php@0.7.3" },
-    { "src": "**/*.*", "use": "@vercel/static" }
+  "routes": [
+    {
+      "src": "/(jobsheet-.*\\.php.*)",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/(jobsheet-[^/]+/?)$",
+      "dest": "/api/index.php"
+    },
+    {
+      "handle": "filesystem"
+    }
   ]
 }
