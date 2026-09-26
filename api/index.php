@@ -1,4 +1,7 @@
 <?php
+// Set default header agar browser tidak memperlakukan output sebagai file download
+header('Content-Type: text/html; charset=UTF-8');
+
 $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $targetFile = dirname(__DIR__) . $requestUri;
 
