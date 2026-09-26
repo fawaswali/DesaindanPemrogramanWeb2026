@@ -8,17 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Kost Papa</h1>
-        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
+        <a href="/jobsheet-09/index.php" class="logo">Kost Papa</a>
         <nav>
-            <ul>
-                <li><a href="/jobsheet-09/index.php">Beranda</a></li>
-                <li><a href="/jobsheet-09/kamar/list.php">Daftar Kamar</a></li>
-                <li><a href="/jobsheet-09/kamar/tambah.php">Tambah Kamar</a></li>
-                <li><a href="/jobsheet-09/penghuni/list.php">Daftar Penghuni</a></li>
-                <li><a href="/jobsheet-09/penghuni/tambah.php">Tambah Penghuni</a></li>
-            </ul>
+            <a href="/jobsheet-09/index.php">Beranda</a>
+            <a href="/jobsheet-09/kamar/list.php">Daftar Kamar</a>
+            <a href="/jobsheet-09/kamar/tambah.php">Tambah Kamar</a>
+            <a href="/jobsheet-09/penghuni/list.php">Daftar Penghuni</a>
+            <a href="/jobsheet-09/penghuni/tambah.php">Tambah Penghuni</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
